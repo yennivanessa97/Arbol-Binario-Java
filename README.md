@@ -38,20 +38,19 @@ La implementación se realizó en Java con:
 ## Ejemplo de ejecución en consola
 
 ### Menú principal
-![Captura del menú principal](./capturas/menu.png)
+![menu.png](imagenes/menu.png)
 
 ### Insertar números
-![Captura insertando números](./capturas/insertar.png)
-
+![insertar.png](imagenes/insertar.png)
+![insertar2.png](imagenes/insertar2.png)
 ### Recorrido inorden
-![Captura del recorrido inorden](./capturas/inorden.png)
+![recorridoInorder.png](imagenes/recorridoInorder.png)
 
 ### Buscar número existente
-![Captura de búsqueda exitosa](./capturas/buscar-existente.png)
+![numeroexistente.png](imagenes/numeroexistente.png)
 
 ### Buscar número inexistente
-![Captura de búsqueda fallida](./capturas/buscar-inexistente.png)
-
+![numeroInexistente.png](imagenes/numeroInexistente.png)
 ---
 
 ## Integrantes del grupo
