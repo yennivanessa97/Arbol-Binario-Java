@@ -48,4 +48,52 @@ class ArbolBinario {
         // Si el dato ya existe, no se inserta duplicado
         return raiz;
     }
+    /**
+     * Muestra el recorrido inorder del árbol.
+     * El recorrido inorden imprime los valores en orden ascendente.
+     */
+    public void inorden() {
+        inordenRec(raiz);
+        System.out.println();
+    }
+
+    /**
+     * Método recursivo para realizar el recorrido inorden:
+     */
+    private void inordenRec(Nodo raiz) {
+        if (raiz != null) {
+            inordenRec(raiz.izquierda);
+            System.out.print(raiz.dato + " ");
+            inordenRec(raiz.derecha);
+        }
+    }
+
+    /**
+     * Busca un valor dentro del árbol.
+     * param dato número entero a buscar
+     * return true si existe, false si no
+     */
+    public boolean buscar(int dato) {
+        return buscarRec(raiz, dato);
+    }
+
+    /**
+     * Búsqueda recursiva en el árbol:
+     * - Retorna true si encuentra el dato
+     * - Retorna false si llega a un nodo nulo
+     */
+    private boolean buscarRec(Nodo raiz, int dato) {
+        if (raiz == null) {
+            return false; // Árbol vacío o no encontrado
+        }
+        if (dato == raiz.dato) {
+            return true; // Encontrado
+        }
+        // Busca en el subárbol correspondiente
+        return dato < raiz.dato
+                ? buscarRec(raiz.izquierda, dato)
+                : buscarRec(raiz.derecha, dato);
+    }
 }
+
+
