@@ -96,4 +96,58 @@ class ArbolBinario {
     }
 }
 
+/**
+ * Clase principal del programa.
+ * Muestra un menú en consola para interactuar con el árbol binario:
+ * 1. Insertar números
+ * 2. Mostrar recorrido inorden
+ * 3. Buscar un número
+ * 4. Salir
+ */
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);   // Para leer datos de consola
+        ArbolBinario arbol = new ArbolBinario(); // Crear árbol vacío
+        int opcion, numero;
+
+        do {
+            // Menú de opciones
+            System.out.println("\n  MENÚ ÁRBOL BINARIO ");
+            System.out.println("1. Insertar número");
+            System.out.println("2. Mostrar recorrido inorden");
+            System.out.println("3. Buscar número");
+            System.out.println("4. Salir");
+            System.out.print("Elige una opción: ");
+            opcion = sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.print("Ingresa número a insertar: ");
+                    numero = sc.nextInt();
+                    arbol.insertar(numero);
+                    System.out.println("Número insertado.");
+                    break;
+                case 2:
+                    System.out.println("Recorrido inorden: ");
+                    arbol.inorden();
+                    break;
+                case 3:
+                    System.out.print("Ingresa número a buscar: ");
+                    numero = sc.nextInt();
+                    if (arbol.buscar(numero))
+                        System.out.println("Número encontrado ");
+                    else
+                        System.out.println("El número no existe ");
+                    break;
+                case 4:
+                    System.out.println("Saliendo");
+                    break;
+                default:
+                    System.out.println("Opción inválida.");
+            }
+        } while (opcion != 4);
+        sc.close(); // Cierra el Scanner
+    }
+
+}
 
